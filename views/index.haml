@@ -1,3 +1,12 @@
 
 %h1= @current_date
-%input.start_date{:type => 'date', :maxlength => '255', :name => 'start_date' }/
+
+%form
+  %fieldset
+    %label{:for => 'start_date'} Start Date
+    %input#start_date{:type => 'date', :maxlength => '255', :name => 'start_date' }
+  %fieldset
+    %label{:for => 'end_date'} End Date(optional)
+    %input#end_date{:type => 'date', :maxlength => '255', :name => 'end_date' }
+  %fieldset
+    %input#submit_button{:type => "submit", :value => "Submit" }
