@@ -3,6 +3,8 @@ require app_file
 require 'capybara/rspec'
 require 'rack/test'
 require 'active_record'
+require 'autotest-fsevent'
+require 'autotest-growl'
 require 'pry'
 require 'pry-nav'
 
@@ -17,3 +19,5 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara::DSL
 end
+
+Capybara.app = app
