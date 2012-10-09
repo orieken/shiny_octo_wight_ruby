@@ -1,15 +1,20 @@
 
-%h1= @current_date
+%h1 How many Releases have you Survived?
 
 %form#submit_start_date{:action => "/", :method => "post"}
-  %fieldset
-    %label{:for => 'start_date'} Start Date
-    %input#start_date{:type => 'date', :maxlength => '255', :name => 'start_date' }
-  %fieldset
-    %label{:for => 'end_date'} End Date(optional)
-    %input#end_date{:type => 'date', :maxlength => '255', :name => 'end_date' }
-  %fieldset
-    %input#submit_button{:type => "submit", :value => "Submit" }
+  %legend Please enter
+  %ol
+    %li
+      %fieldset
+        %label{:for => 'start_date'} Your Start Date
+        %input#start_date{:type => 'date', :maxlength => '255', :name => 'start_date', :placeholder => "MM/DD/YYYY"}
+    %li
+      %fieldset
+        %label{:for => 'end_date'} Your End Date(optional)
+        %input#end_date{:type => 'date', :maxlength => '255', :name => 'end_date', :placeholder => "MM/DD/YYYY" }
+    %li
+      %fieldset
+        %input#submit_button{:type => "submit", :value => "Submit" }
 
 #test
 #msg

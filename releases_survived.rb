@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'active_record'
+require 'haml'
+require 'sass'
 require 'pry'
 require 'pry-nav'
 require './config/environments'
-
 
 set :haml, {:format => :html5}
 enable :sessions
@@ -14,6 +15,11 @@ get '/' do
   @title = "Releases Survived"
   @current_date = Time.now.strftime('%D')
   haml :index
+end
+
+get '/stylesheet.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :stylesheet
 end
 
 post '/' do

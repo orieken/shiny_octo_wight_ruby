@@ -13,6 +13,7 @@ gem 'haml'
 gem 'fastercsv'
 gem 'thin'
 gem 'heroku'
+gem 'sass'
 # shiny_octo_wight_ruby
 
 
