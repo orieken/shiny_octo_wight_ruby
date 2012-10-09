@@ -3,8 +3,10 @@
   %head
     %meta{ :'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %title == #{@title}
-    %link{:rel => 'stylesheet', :href => '/stylesheet.css'}/
-    %script{:src=>'/jquery-1.4.2.min.js'}
+    %link{:rel => 'stylesheet', :href => '/styles/styles.css'}/
+    %script{:src => '/jquery-1.4.2.min.js'}
+    %script{:src => "http://rightjs.org/hotlink/right.js"}
+    %script{:src => '/release.js' }
 
 %body
   = yield

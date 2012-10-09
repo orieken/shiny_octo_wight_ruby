@@ -1,7 +1,7 @@
 
 %h1= @current_date
 
-%form
+%form#submit_start_date{:action => "/", :method => "post"}
   %fieldset
     %label{:for => 'start_date'} Start Date
     %input#start_date{:type => 'date', :maxlength => '255', :name => 'start_date' }
@@ -10,3 +10,6 @@
     %input#end_date{:type => 'date', :maxlength => '255', :name => 'end_date' }
   %fieldset
     %input#submit_button{:type => "submit", :value => "Submit" }
+
+#test
+#msg

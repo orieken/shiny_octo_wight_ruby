@@ -13,4 +13,6 @@ describe "Capybara examples" do
   it { page.should have_selector('input#start_date') }
   it { page.should have_selector('input#end_date') }
   it { page.should have_button('Submit') }
+
+
 end
