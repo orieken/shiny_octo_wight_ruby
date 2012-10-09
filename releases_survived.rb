@@ -13,7 +13,6 @@ set :database, ENV['DATABASE_URL'] ? ENV['DATABASE_URL'] : 'sqlite://releases.db
 
 get '/' do
   @title = "Releases Survived"
-  @current_date = Time.now.strftime('%D')
   haml :index
 end
 
@@ -42,16 +41,6 @@ end
 class Release < ActiveRecord::Base
 
   def self.releases_in_range(start_date, end_date)
-    #if start_date > Release.first.release_date
-    #  return 100
-    #end
-    omg_all_releases = Release.find(:all, :conditions => {:release_date => (start_date)...(end_date)})
-    actual_count = 0
-    omg_all_releases.each do |count_release_correctly|
-      actual_count += 1
-      p actual_count
-      count_release_correctly.id
-    end
-    actual_count
+    Release.find(:all, :conditions => {:release_date => (start_date)...(end_date)})
   end
 end

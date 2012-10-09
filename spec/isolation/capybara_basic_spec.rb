@@ -7,7 +7,7 @@ describe "Capybara examples" do
     visit "/"
   end
 
-  it { page.should have_content(Time.now.strftime('%D')) }
+  it { page.should have_content("How many Releases have you Survived?") }
   it { page.should have_selector('form') }
   it { page.should have_selector('h1') }
   it { page.should have_selector('input#start_date') }

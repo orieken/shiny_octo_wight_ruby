@@ -8,6 +8,7 @@ require 'autotest-growl'
 require 'pry'
 require 'pry-nav'
 
+
 # Force the application name because polyglot breaks the auto-detection logic.
 Sinatra::Application.app_file = app_file
 
