@@ -7,6 +7,11 @@ require 'autotest-fsevent'
 require 'autotest-growl'
 require 'pry'
 require 'pry-nav'
+require 'factory_girl'
+require File.expand_path(File.dirname(__FILE__)) + '/../models/release.rb'
+require_relative 'factories'
+require 'accept_values_for'
+require 'securerandom'
 
 
 # Force the application name because polyglot breaks the auto-detection logic.
@@ -19,6 +24,8 @@ end
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara::DSL
+  config.include FactoryGirl::Syntax::Methods
 end
 
 Capybara.app = app
+

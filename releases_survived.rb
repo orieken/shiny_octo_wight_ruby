@@ -36,11 +36,3 @@ get '/results' do
   @item = Release.releases_in_range(start_date, end_date)
   haml :results, :locals => {:start_date => start_date, :end_date => end_date}
 end
-
-#model
-class Release < ActiveRecord::Base
-
-  def self.releases_in_range(start_date, end_date)
-    Release.find(:all, :conditions => {:release_date => (start_date)...(end_date)})
-  end
-end

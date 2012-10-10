@@ -15,6 +15,8 @@ gem 'thin'
 gem 'heroku'
 gem 'sass'
 # shiny_octo_wight_ruby
+gem 'factory_girl'
+gem 'accept_values_for'
 
 
 group :development, :test do
