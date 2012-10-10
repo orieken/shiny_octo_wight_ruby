@@ -9,7 +9,6 @@ describe Release do
     it { should_not accept_values_for(:release_number, nil) }
     it { should_not accept_values_for(:release_number, "a") }
     it { should_not accept_values_for(:release_number, "a" * 201) }
-
   end
 
 
