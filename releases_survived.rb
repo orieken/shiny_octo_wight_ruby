@@ -8,7 +8,6 @@ require './config/environments'
 
 set :haml, {:format => :html5}
 enable :sessions
-set :database, ENV['DATABASE_URL'] ? ENV['DATABASE_URL'] : 'sqlite://releases.db'
 
 
 get '/' do
@@ -33,6 +32,6 @@ get '/results' do
              else
                Date.strptime(session[:end_date], "%Y-%m-%d")
              end
-  @item = Release.releases_in_range(start_date, end_date)
+  @item = Release.releases_in_range(start_date, end_date).count
   haml :results, :locals => {:start_date => start_date, :end_date => end_date}
 end

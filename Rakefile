@@ -1,11 +1,14 @@
+require File.join(File.expand_path(File.dirname(__FILE__)), 'releases_survived')
 require 'rubygems'
 require 'bundler/setup'
-
-require File.join(File.expand_path(File.dirname(__FILE__)), 'releases_survived')
+require './config/environments'
+require './models/release.rb'
 require 'active_record'
 require 'sinatra/activerecord/rake'
 require 'csv'
-require './config/environments'
+require 'pry'
+require 'pry-nav'
+
 
 task :default => [:'db:migrate', :features]
 

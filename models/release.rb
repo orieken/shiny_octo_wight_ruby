@@ -1,3 +1,4 @@
+
 class Release < ActiveRecord::Base
   include ActiveModel::Validations
   attr_accessor :release_number, :release_date
